@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.blooddonor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BloodDonor"
+        tools:targetApi="31">
+        <activity
+            android:name=".staff.donor.DonorDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".staff.StaffMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".staff.DonorListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".points.redeemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".points.collPointsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appoinment.notiApptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appoinment.myApptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appoinment.NewApptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".points.PointsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appoinment.appointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.kddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.NewUser"
+            android:exported="false" />
+        <activity
+            android:name=".user.ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".user.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.RegisterUser"
+            android:exported="false" />
+        <activity
+            android:name=".user.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

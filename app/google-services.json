@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "942093003776",
+    "firebase_url": "https://auth-caf3e-default-rtdb.firebaseio.com",
+    "project_id": "auth-caf3e",
+    "storage_bucket": "auth-caf3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942093003776:android:cb1b0e1c4836373a4cbce5",
+        "android_client_info": {
+          "package_name": "com.example.blooddonor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942093003776-bbl8fpg02582mrugd61hd2jlo6p4t93r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVLqgdTuDN358Jzu9NqlKpwDFh7VRYtd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942093003776-bbl8fpg02582mrugd61hd2jlo6p4t93r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
