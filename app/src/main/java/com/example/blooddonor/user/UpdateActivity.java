@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,22 +12,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.blooddonor.R;
+import com.example.blooddonor.model.Appointment;
+import com.example.blooddonor.model.User;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class UpdateActivity extends AppCompatActivity {
 
-    private DatabaseReference mDatabase;
     private Button update;
     private TextView emailAddressTitle, fullNameTitle, idNumberTitle, phoneNumberTitle;
 
     private EditText email, fullName, idNumber, phoneNumber;
 
     private FirebaseDatabase database;
+    private FirebaseAuth auth;
     private DatabaseReference reference;
+    private FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +54,10 @@ public class UpdateActivity extends AppCompatActivity {
         idNumber = findViewById(R.id.idNumber);
         phoneNumber = findViewById(R.id.phoneNumber);
 
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference().child("Users");
+        reference = database.getReference().child("Users").child(auth.getUid());
 
         reference.child("fullName").addValueEventListener(new ValueEventListener() {
             @Override
@@ -112,17 +125,28 @@ public class UpdateActivity extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 String name = fullName.getText().toString();
-                 String id = idNumber.getText().toString();
-                 String phone = phoneNumber.getText().toString();
-                 String emel = email.getText().toString();
+                String name = fullName.getText().toString();
+                String id = idNumber.getText().toString();
+                String phone = phoneNumber.getText().toString();
+                String emel = email.getText().toString();
 
-                 reference.child("fullName").setValue(name);
-                reference.child("idNumber").setValue(id);
-                reference.child("phoneNumber").setValue(phone);
-                reference.child("email").setValue(emel);
+                user.updateEmail(emel)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Log.d("success", "email user has been successfully updated!");
+                            }
+                        });
 
-                Toast.makeText(UpdateActivity.this, "Successfully register", Toast.LENGTH_LONG).show();
+                Map<String, Object> newUser = new HashMap<>();
+                newUser.put("/email/", emel);
+                newUser.put("/fullName/", name);
+                newUser.put("/idNumber/", id);
+                newUser.put("/phoneNumber/", phone);
+
+                reference.updateChildren(newUser);
+
+                Toast.makeText(UpdateActivity.this, "Successfully update!", Toast.LENGTH_LONG).show();
 
             }
         });

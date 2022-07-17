@@ -45,8 +45,10 @@ public class notiApptActivity extends AppCompatActivity {
         // init component
         recyclerView = findViewById(R.id.rcNotiAppointment);
 
-        // retrieve data
+        // retrieve user data
         appointmentRef
+                .orderByChild("userId")
+                .equalTo(auth.getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
