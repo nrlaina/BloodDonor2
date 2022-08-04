@@ -78,6 +78,20 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
+        android:id="@+id/screening"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#0ED6B9"
+        android:text="Donor Eligibility"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/points"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
         android:id="@+id/signOut"
         android:layout_width="380dp"
         android:layout_height="70dp"
@@ -87,7 +101,7 @@
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/points"
+        app:layout_constraintTop_toBottomOf="@+id/screening"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 

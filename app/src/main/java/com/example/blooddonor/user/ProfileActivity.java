@@ -30,6 +30,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         appointment.setOnClickListener(this);
         Button points = findViewById(R.id.points);
         points.setOnClickListener(this);
+        Button screening = findViewById(R.id.screening);
+        screening.setOnClickListener(this);
         Button logout = findViewById(R.id.signOut);
 
         builder = new MaterialAlertDialogBuilder(this);
@@ -75,6 +77,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ProfileActivity.this, PointsActivity.class));
+            }
+        });
+
+        screening.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfileActivity.this, EligibilityActivity.class));
             }
         });
     }
