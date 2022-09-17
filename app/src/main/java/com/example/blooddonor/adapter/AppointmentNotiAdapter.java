@@ -1,5 +1,6 @@
 package com.example.blooddonor.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blooddonor.R;
@@ -35,6 +37,14 @@ public class AppointmentNotiAdapter extends RecyclerView.Adapter<AppointmentNoti
         holder.tvDate.setText(appointments.get(position).getDate());
         holder.tvTime.setText(appointments.get(position).getTime());
 
+//        if(appointments.get(position).getAttendance()){
+//
+//            holder.card.setCardBackgroundColor(Color.parseColor("#0000FF"));
+//        }
+//        else{
+//            holder.card.setCardBackgroundColor(Color.parseColor("#FF0000"));
+//        }
+
         if (appointments.get(position).getStatus().equals("approved"))
             holder.imgViewStatus.setImageResource(R.drawable.check_status);
         else
@@ -50,10 +60,10 @@ public class AppointmentNotiAdapter extends RecyclerView.Adapter<AppointmentNoti
 
         TextView tvLocation, tvDate, tvTime;
         ImageView imgViewStatus;
-
+        CardView card;
         public DesignViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            card = itemView.findViewById(R.id.bgColor);
             tvLocation = itemView.findViewById(R.id.tvLocationNotiAppt);
             tvDate = itemView.findViewById(R.id.tvDateNotiAppt);
             tvTime = itemView.findViewById(R.id.tvTimeNotiAppt);

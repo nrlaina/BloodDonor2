@@ -19,11 +19,11 @@ public class PointsActivity extends AppCompatActivity implements View.OnClickLis
 
         // init components
         Button btnCollectedPoints = findViewById(R.id.btnMyPoints);
-        Button btnRedeemPoints = findViewById(R.id.btnRedeem);
+        //Button btnRedeemPoints = findViewById(R.id.btnRedeem); removed
 
         // btn listener
         btnCollectedPoints.setOnClickListener(this);
-        btnRedeemPoints.setOnClickListener(this);
+        //btnRedeemPoints.setOnClickListener(this);
 
     }
 
@@ -34,9 +34,9 @@ public class PointsActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btnMyPoints:
                 startActivity(new Intent(PointsActivity.this, collPointsActivity.class));
                 break;
-            case R.id.btnRedeem:
-                startActivity(new Intent(PointsActivity.this, redeemActivity.class));
-                break;
+            //case R.id.btnRedeem:
+                //startActivity(new Intent(PointsActivity.this, redeemActivity.class));
+                //break;
         }
     }
 }

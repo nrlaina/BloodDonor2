@@ -47,7 +47,7 @@ public class notiApptActivity extends AppCompatActivity {
 
         // retrieve user data
         appointmentRef
-                .orderByChild("userId")
+                .orderByChild("userID")
                 .equalTo(auth.getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @SuppressLint("NotifyDataSetChanged")

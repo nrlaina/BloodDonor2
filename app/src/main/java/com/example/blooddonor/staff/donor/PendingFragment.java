@@ -82,6 +82,9 @@ public class PendingFragment extends Fragment implements DonorAdapter.OnDonorDet
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                             Donor donor = dataSnapshot.getValue(Donor.class);
+//                            donor.setAppointmentId(snapshot.getKey());
+
+                            Log.e(donor.getAppointmentId(), "test: ");
                             donors.add(donor);
                         }
                         donorAdapter.notifyDataSetChanged();

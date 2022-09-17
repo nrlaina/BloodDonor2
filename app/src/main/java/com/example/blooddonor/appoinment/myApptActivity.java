@@ -43,23 +43,35 @@ public class myApptActivity extends AppCompatActivity implements AppoinmentAdapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_appt);
 
+
         // init firebase
         auth = FirebaseAuth.getInstance();
         firebase = FirebaseDatabase.getInstance();
         appoinmentRef = firebase.getReference().child("Appointments");
 
         // retrieve appointment
-        appoinmentRef.orderByChild("userId")
+        appoinmentRef.orderByChild("userID")
                 .equalTo(auth.getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                            Appointment appointment = dataSnapshot.getValue(Appointment.class);
-                            appoinmentArrayList.add(appointment);
+                        if(snapshot.exists()){
+                            Log.e("data wujud", "onDataChange: ");
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                Appointment appointment = dataSnapshot.getValue(Appointment.class);
+                                appoinmentArrayList.add(appointment);
+
+                            }
+
                         }
+                        else{
+                            Log.e("data xde", "onDataChange: " );
+                        }
+
                         appoinmentAdapter.notifyDataSetChanged();
+                        int x = appoinmentArrayList.size();
+                        Log.e(String.valueOf(x), "checking arraysize: " );
                     }
 
                     @Override

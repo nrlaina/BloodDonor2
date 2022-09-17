@@ -94,7 +94,7 @@ public class NewApptActivity extends AppCompatActivity {
                     String time = apptTime.getText().toString().trim();
                     String key = newAppoinmentRef.push().getKey();
 
-                    Appointment appointment = new Appointment(location, date, time, "pending", auth.getUid(), key);
+                    Appointment appointment = new Appointment(location, date, time, "pending", auth.getUid(), key, false);
 
                     Map<String, Object> newAppointment = new HashMap<>();
                     newAppointment.put(key, appointment);
@@ -108,11 +108,22 @@ public class NewApptActivity extends AppCompatActivity {
 
                                     String fullName = snapshot.child("fullName").getValue(String.class);
                                     String ic = snapshot.child("idNumber").getValue(String.class);
+                                    String userID = FirebaseAuth.getInstance().getUid();
+                                    boolean x = false;
 
+
+                                    insertUser.put(key + "/appointmentId/", key.toString());
                                     insertUser.put(key + "/fullName/", fullName);
                                     insertUser.put(key + "/idNumber/", ic);
-
+                                    insertUser.put(key + "/attendance/",false);
+                                    insertUser.put(key + "/status/","pending");
+                                    insertUser.put(key + "/date/",date);
+                                    insertUser.put(key + "/time/",time);
+                                    insertUser.put(key + "/location/",location);
+                                    insertUser.put(key + "/userID/", userID);
+//
                                     newAppoinmentRef.updateChildren(insertUser);
+
                                 }
 
                                 @Override

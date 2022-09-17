@@ -29,15 +29,36 @@
         <entry key="..\:/Programming/androidProject/BloodDonor-master/app/src/main/res/layout/fragment_disapprove.xml" value="0.360054347826087" />
         <entry key="..\:/Programming/androidProject/BloodDonor-master/app/src/main/res/layout/fragment_pending.xml" value="0.36666666666666664" />
         <entry key="..\:/Programming/androidProject/BloodDonor-master/app/src/main/res/layout/loading_dialog.xml" value="0.25" />
-        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_eligibility.xml" value="0.1" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/drawable/splash_bg.xml" value="0.1125" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_appointment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_coll_points.xml" value="0.25" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_donor_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_donor_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_eligibility.xml" value="0.15" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_forgot_password.xml" value="0.20244565217391305" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_kdd.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_my_appt.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_new_appt.xml" value="0.15" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_new_user.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_noti_appt.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_points.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_redeem.xml" value="0.10650887573964497" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_register_user.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_reward_appointment.xml" value="0.33" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_screening.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_staff_main.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/activity_update.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/appointment_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/appointment_noti_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/donor_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/fragment_approve.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/fragment_disapprove.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/fragment_pending.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/loading_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JAJA/StudioProjects/BloodDonor1/app/src/main/res/layout/reward_appointment_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/BloodDonor/app/src/main/res/layout/activity_appointment.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/BloodDonor/app/src/main/res/layout/activity_coll_points.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/BloodDonor/app/src/main/res/layout/activity_forgot_password.xml" value="0.20416666666666666" />

@@ -8,17 +8,42 @@ public class Appointment {
     public String status;
     public String userId;
     public String appointmentId;
+    public String fullName;
+    public Boolean attendance;
 
-    public Appointment() {
+    public Appointment(String location, String date, String time, String pending, String uid, String key, boolean attendance) {
     }
 
-    public Appointment(String location, String date, String time, String status, String userId, String appointmentId) {
+    public Boolean getAttendance() {
+        return attendance;
+    }
+
+    public void setAttendance(Boolean attendance) {
+        this.attendance = attendance;
+    }
+
+
+
+    public Appointment() {
+
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Appointment(String location, String date, String time, String status, String userId, String appointmentId ) {
         this.location = location;
         this.date = date;
         this.time = time;
         this.status = status;
         this.userId = userId;
         this.appointmentId = appointmentId;
+
     }
 
     public String getLocation() {

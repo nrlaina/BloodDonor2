@@ -80,7 +80,8 @@ public class DonorDetailActivity extends AppCompatActivity {
                         .setCancelable(true)
                         .setPositiveButton("Yes", (dialogInterface, i) -> {
 
-                            // update donor appointment status
+                            Log.e(donor.getAppointmentId(), "onClick: ");
+                             //update donor appointment status
                             appointmentRef.orderByChild("appointmentId")
                                     .equalTo(donor.getAppointmentId())
                                     .addValueEventListener(new ValueEventListener() {
@@ -97,26 +98,26 @@ public class DonorDetailActivity extends AppCompatActivity {
 
                                         }
                                     });
-
+                            //removed uncollected points
                             // update uncollected points
-                            userRef.child(donor.getUserId())
-                                    .addListenerForSingleValueEvent(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                                            int point = snapshot.hasChild("uncollected_point") ? snapshot.child("uncollected_point").getValue(Integer.class) + 1 : 1;
-
-                                            Map<String, Object> updateUncollectedPoint = new HashMap<>();
-                                            updateUncollectedPoint.put(donor.getUserId() + "/uncollected_point/", point);
-
-                                            userRef.updateChildren(updateUncollectedPoint);
-                                        }
-
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-
-                                        }
-                                    });
+//                            userRef.child(donor.getUserId())
+//                                    .addListenerForSingleValueEvent(new ValueEventListener() {
+//                                        @Override
+//                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                                            int point = snapshot.hasChild("uncollected_point") ? snapshot.child("uncollected_point").getValue(Integer.class) + 1 : 1;
+//
+//                                            Map<String, Object> updateUncollectedPoint = new HashMap<>();
+//                                            updateUncollectedPoint.put(donor.getUserId() + "/uncollected_point/", point);
+//
+//                                            userRef.updateChildren(updateUncollectedPoint);
+//                                        }
+//
+//                                        @Override
+//                                        public void onCancelled(@NonNull DatabaseError error) {
+//
+//                                        }
+//                                    });
 
                             Toast.makeText(DonorDetailActivity.this, "Donor has been approved!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(DonorDetailActivity.this, StaffMainActivity.class));

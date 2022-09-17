@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.blooddonor.points.rewardAppointment;
 import com.example.blooddonor.user.LoginActivity;
 import com.example.blooddonor.R;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -33,11 +34,13 @@ public class StaffMainActivity extends AppCompatActivity implements View.OnClick
         // init component
         Button btnListDonor = findViewById(R.id.btnListDonor);
         Button btnLogout = findViewById(R.id.btnLogout);
+        Button btnApprovePoints = findViewById(R.id.btnApprovePoints);
 
         builder = new MaterialAlertDialogBuilder(this);
 
         // btn listener
         btnListDonor.setOnClickListener(this);
+        btnApprovePoints.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
     }
 
@@ -49,6 +52,9 @@ public class StaffMainActivity extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(StaffMainActivity.this, DonorListActivity.class));
                 break;
 
+            case R.id.btnApprovePoints:
+                startActivity(new Intent(StaffMainActivity.this, rewardAppointment.class));
+                break;
             case R.id.btnLogout:
                 builder.setTitle("Logout")
                         .setMessage("Are you sure want to logout?")
